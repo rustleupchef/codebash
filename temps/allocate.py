@@ -57,16 +57,19 @@ def main(arguments: list[str] = []):
             input_file_name = f"{file_name}.dat"
             output_file_name = f"{file_name}.out"
 
+            input_file_content = ""
             if os.path.exists(os.path.join(path, input_file_name)):
                 with open(os.path.join(path, input_file_name), "r") as f:
                     input_file_content = f.read()
-                with open(os.path.join(input_dir, f"input{i+1}.txt"), "w") as f:
-                    f.write(input_file_content)
+            with open(os.path.join(input_dir, f"input{i+1}.txt"), "w") as f:
+                f.write(input_file_content)
+
+            output_file_content = ""
             if os.path.exists(os.path.join(path, output_file_name)):
                 with open(os.path.join(path, output_file_name), "r") as f:
                     output_file_content = f.read()
-                with open(os.path.join(output_dir, f"output{i+1}.txt"), "w") as f:
-                    f.write(output_file_content)
+            with open(os.path.join(output_dir, f"output{i+1}.txt"), "w") as f:
+                f.write(output_file_content)
 
 
         with open(os.path.join(problem_dir, "Main.java"), "w") as f:
