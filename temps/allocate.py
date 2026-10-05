@@ -47,9 +47,9 @@ def main(arguments: list[str] = []):
         os.path.exists(working_dir) or os.makedirs(working_dir)
         os.path.exists(problem_dir) or os.makedirs(problem_dir)
 
-        input_dir = os.path.join(problem_dir, "input")
+        input_dir = os.path.join(problem_dir, "inputs")
         os.makedirs(input_dir, exist_ok=True)
-        output_dir = os.path.join(problem_dir, "output")
+        output_dir = os.path.join(problem_dir, "outputs")
         os.makedirs(output_dir, exist_ok=True)
 
         for i in range(num + 1):
